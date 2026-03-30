@@ -133,14 +133,23 @@ They use this data to look at ...
 
 <!--- Write a brief discription of the project you are processing this data source for. This could be a copy-paste from other documentation. ---->
 
-This data is identified as a data source for PROJECT.
-The purpose of this PROJECT is...
+The Decomposition Across Drylands (DeAD) data collection is a new data effort targeting dryland decomposition studies. The purpose of this data collection is to develop better litter decay models for dryland ecosystems.
 
 <!--- Include a list of the key variables identified for the project. This is used to identify the elements for the paper for the data rescue. An example is below for a basic geo-located soil carbon stock project. --->
+### Main Variables of Interest
+  - Location: Found in the Experimental area and layout subheading of the Material and Methods section; located in Montes de Toledo, central Spain, (39°31′N, 4°16′40″W)
+  - Duration: Found in the Experimental area and layout subheading of the Material and Methods section; May 2011- February 2013
+  - Mass Loss: Decay rate can be found in Table 2, Remaining dry mass can be found in Figure 1 
+  - Solar Exposure: Solar exposure not explicitly stated, but canopy reduction mentioned in the Experimental area and layout section of the Material and methods section. 
 
-  - Location: The geo-location is given in the site description section of the methods. Both latitude and longitude are given but not the datum/projection that was used.
-  - Soil carbon stock: Soil carbon stock was calculated from organic carbon fraction and bulk density and is reported in table 3 across two treatments and one control. Coarse fraction was not reported and does not appear to be included.
-  
+### Other Relevant Variables:
+  - Litter species: Found in experimental area and layout subheading of the material and methods section
+  - Litter Chemical Composition: Found in Table 1
+  - Microsite data:  Found in the Experimental area and layout subheading of the Material and Methods section
+  - Land use: Mixed forest stand, previously used as an experimental site for forced thinning; Mentioned in the Experimental area and layout subheading of the Material and Methods section
+  - Litterbag method: Stated in the Experimental area and layout subheading of the Material and Methods section but bag area and mesh size not included
+  - Ecosystem Age:  Found in the Experimental area and layout subheading of the Material and Methods section; more than 50 years.
+
 ## Files
 
 <!--- Include a brief explaination to all the files in the folder--->
@@ -172,8 +181,9 @@ These files are in the AuthorYYYY data rescue.
   - [ ] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
   - [ ] Add the reviewer to the author list in the yml
 + Do
-  - [ ] Create a spreadsheet with TableN and export it to csv
-  - [ ] Extract points from FigureM and export it to csv
+  - [ ] Create a spreadsheet with Table1 and export it to csv
+  - [ ] Create a spreadsheet with Table2 and export it to csv
+  - [ ] Extract points from Figure1 and export it to csv
   - [ ] Transcribe or copy the method section
   - [ ] Insert references to bib entries
   - [ ] reformat equations and mathematical symbols as [LaTex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
