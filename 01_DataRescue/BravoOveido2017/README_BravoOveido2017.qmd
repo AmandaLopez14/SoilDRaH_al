@@ -109,25 +109,28 @@ is_type.file <- '../../semantics/SoilDRaHVocabulary_is_type.csv'
 
 <!---- Fill in the full citation here, generally found on the journal page and link in the issue that you started on GitHub. Though this is at the top of the document, this should be one of the last things you do because a lot of this will be a direct copy-paste into the issue template. --->
 
-> Full citation here, exact format does not matter but it should be complete enough to find the paper. Please include the doi
+Bravo-Oviedo, Andrés & Ruiz-Peinado, Ricardo & Onrubia, Raquel & Rio, Miren. (2017). Thinning alters the early-decomposition rate and nutrient immobilization-release pattern of foliar litter in Mediterranean oak-pine mixed stands. Forest Ecology and Management. 391. 309-320. 10.1016/j.foreco.2017.02.032. 
 
 For the discussion of this data rescue see the Github issue: https://github.com/ktoddbrown/SoilDRaH/issues/#.
 
-<!--- After you read through the paper write a brief summary of what the study
-measured and what the data was used for in. This should be <250 words.--->
-
-AuthorYYYY primarily measures ... 
-They use this data to look at ...
+This paper looks at the effects of forest thinning on early-stage foliar decomposition rate and nutient immobilization-release pattern in a mixed Quercus pyreniaca-Pinus pinaster forest in the western Meditterenean basin. Decay rates and dry mass remaining were examined along with concentrations of elements like C, N, P, Ca, Mg, and K before and after an incubation period of two years. Two thinning treatments were tested along with a control group, labeled labeled Light Thinning (HT), Heavy Thinning (LT) and Control (CT). Data was collected and analyzed with a linear mixed model analysis, finding that thinning reduced the decay rate of forest litter as well as concentrations of Nitrogen and Phosphorus.
 
 ## Tables and figures
 
 <!--- Write a brief discription of all the tables and figures in this source. This should include full variable names when possible. It is perfectly fine to restate the captions here or copy other text that feels complete. Please keep this to a single sentence for each table/figure.--->
 
 - Table 
-  1) Describe the data in the first table.
+  1) Initial concentration of elements analyzed two years after thinning for different litter types and treatments, including C:N ratio.
+  2) Decay rates for various litter types with different treatments.
+  3) Linear mixed effect model for element concentration during 2-year litter decomposition.
+  4) Linear mixed effect model for release-immobilization pattern during 2-year litter decomposition including Carbon, Nitrogen, and Phosphorus.
+  5) Pairwise difference least mean comparison by litter type and treatment in C, N, and P.
 
 - Figure 
-  1)  Describe the data in the first figure
+  1)  Remaining dry mass % of litter after two years of decomposition.
+  2) Concentration dynamics after two years of decomposition including C, N, P, etc. concentrations.
+  3a) C, N, and P stock dynamics after two years of decomposition as % vs time since incubation.
+  3b) Mg, Ca, and K stock dynamics after two years of decomposition as % vs time since incubation.
 
 ## Fit for purpose: ProjectName
 
@@ -148,7 +151,7 @@ The Decomposition Across Drylands (DeAD) data collection is a new data effort ta
   - Microsite data:  Found in the Experimental area and layout subheading of the Material and Methods section
   - Land use: Mixed forest stand, previously used as an experimental site for forced thinning; Mentioned in the Experimental area and layout subheading of the Material and Methods section
   - Litterbag method: Stated in the Experimental area and layout subheading of the Material and Methods section but bag area and mesh size not included
-  - Ecosystem Age:  Found in the Experimental area and layout subheading of the Material and Methods section; more than 50 years.
+  - Ecosystem Age:  Found in the Experimental area and layout subheading of the Material and Methods section; >50 years.
 
 ## Files
 
@@ -176,7 +179,7 @@ These files are in the AuthorYYYY data rescue.
 + Lead
   - [ ] Read the article or data resource and the discription of the target project
   - [ ] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_AuthorYYYY'
-  - [ ] Create a copy of this template folder and rename it to AuthorYYYY
+  - [ ] Create a copy of template folder and rename it to BravoOveido2017
   - [ ] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
   - [ ] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
   - [ ] Add the reviewer to the author list in the yml
