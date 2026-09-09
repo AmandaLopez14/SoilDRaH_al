@@ -35,7 +35,7 @@ Total mass loss was calculated for the whole sample.
 The elements analyzed were total carbon (C) in percentage, total nitrogen (N), phosphorus (P), calcium (Ca), magnesium (Mg) and potassium (K).
 
 Total C and N were determined in a HCN-600 LECO.
-Foliar samples were digested in a high pressure aqua regia system (ETHOS PLIS) and nutrient concentrations (mg g<sup>-1</sup> of dry matter) were measured using ICP-OES [@PerkinElmer2000].
+Foliar samples were digested in a high pressure aqua regia system (ETHOS PLIS) and nutrient concentrations (mg g<sup>-1</sup> of dry matter) were measured using ICP-OES (Perkin-Elmer, Optima 2000).
 
 ## 2.3. Initial nutrient concentrations
 
