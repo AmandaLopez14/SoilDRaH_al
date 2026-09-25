@@ -32,6 +32,17 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
       - transcription: secondary #secondary, review
       - standardization: lead #review
       - curation: lead #review
+  - id: # i think its brandon #use the github name as an id
+    name:
+      given: 
+      family: 
+    orcid: #idk what this is
+    affiliation:
+      - ref: uf-ees
+    role: #TODO define these roles and add reference
+      - transcription: review #secondary, review
+      - standardization: review #review
+      - curation: review #review
 
 affiliations:
   - id: uf-ees
@@ -121,7 +132,7 @@ library(bibtex) # reading in BibTex files to R
 BravoOveido2017_Methods.md <- "AuthorYYYY_Methods.md"
 BravoOveido2017_Table1.csv <- 'AuthorYYYY_TableN.csv'
 BravoOveido2017_Table2.csv
-# figureM.file <- 'AuthorYYYY_FigureM.csv'
+BravoOveido2017_Figure1.csv # figureM.file <- 'AuthorYYYY_FigureM.csv' 
 
 # Bibliography files
 BravoOveido2017.bib <- 'AuthorYYYY.bib'
@@ -207,6 +218,7 @@ These files are in the BravoOveido2017 data rescue.
   + table 1 from primary article 
 - [BravoOveido2017_Table2.csv](BravoOveido2017_Table2.csv)
   + table 2 from primary article
+- [BravoOveido2017_Figure1.csv](BravoOveido2017_Figure1.csv)
 - [temp/](temp/)
     + scratch folder that will not be archived on GitHub, it should include local copies of the data resource (likely a PDF article) and any spreadsheets or other tools you used for the transcriptions.
     
@@ -217,24 +229,24 @@ These files are in the BravoOveido2017 data rescue.
 ## Data Rescue Plan
 
 + Lead
-  - [ ] Read the article or data resource and the discription of the target project
-  - [ ] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_AuthorYYYY'
-  - [ ] Create a copy of template folder and rename it to BravoOveido2017
-  - [ ] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
-  - [ ] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
-  - [ ] Add the reviewer to the author list in the yml
+  - [x] Read the article or data resource and the description of the target project
+  - [x] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_AuthorYYYY'
+  - [x] Create a copy of template folder and rename it to BravoOveido2017
+  - [x] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
+  - [x] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
+  - [x] Add the reviewer to the author list in the yml
 + Do
-  - [ ] Create a spreadsheet with Table1 and export it to csv
-  - [ ] Create a spreadsheet with Table2 and export it to csv
+  - [x] Create a spreadsheet with Table1 and export it to csv
+  - [x] Create a spreadsheet with Table2 and export it to csv
   - [ ] Extract points from Figure1 and export it to csv
-  - [ ] Transcribe or copy the method section
-  - [ ] Insert references to bib entries
-  - [ ] reformat equations and mathematical symbols as [LaTex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
-  - [ ] reformat text using [Markdown](https://www.markdownguide.org/cheat-sheet/)
-  - [ ] Create a bib file with the citations from the methods section
-  - [ ] Push to your local fork and get a second transcription pushed to your local fork by someone else on the project
+  - [x] Transcribe or copy the method section
+  - [x] Insert references to bib entries
+  - [x] reformat equations and mathematical symbols as [LaTex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+  - [x] reformat text using [Markdown](https://www.markdownguide.org/cheat-sheet/)
+  - [x] Create a bib file with the citations from the methods section
+  - [x] Push to your local fork and get a second transcription pushed to your local fork by someone else on the project
 + Measure
-  - [ ] cross check with second transcriber for tables and methods, and resolve any differences
+  - [x] cross check with second transcriber for tables and methods, and resolve any differences
   - [ ] compile or render this ReadMe with all chunks up through the Level 0 data rescue section with `eval: true`
   - [ ] push to your local fork and create a pull request to the main branch of the primary repository
   - [ ] address any revisions in your pull request review
