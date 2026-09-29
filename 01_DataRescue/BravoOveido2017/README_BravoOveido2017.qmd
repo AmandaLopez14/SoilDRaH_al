@@ -129,18 +129,18 @@ library(kableExtra) # pretty tables
 library(bibtex) # reading in BibTex files to R
 
 # data files for level 0
-BravoOveido2017_Methods.md <- "AuthorYYYY_Methods.md"
-BravoOveido2017_Table1.csv <- 'AuthorYYYY_TableN.csv'
-BravoOveido2017_Table2.csv
-BravoOveido2017_Figure1.csv # figureM.file <- 'AuthorYYYY_FigureM.csv' 
+BravoOveido2017_Methods.md <- "BravoOveido2017_Methods.md"
+BravoOveido2017_Table1.csv <- 'BravoOveido2017_Table1.csv'
+BravoOveido2017_Table2.csv <- 'BravoOveido2017_Table2.csv'
+BravoOveido2017_Figure1.csv <- 'BravoOveido2017_Figure1.csv' 
 
 # Bibliography files
-BravoOveido2017.bib <- 'AuthorYYYY.bib'
-BravoOveido2017_Methods.bib <- 'AuthorYYYY_Methods.bib'
+BravoOveido2017.bib <- 'BravoOveido2017.bib'
+BravoOveido2017_Methods.bib <- 'BravoOveido2017_Methods.bib'
 
 # read function; you will need to create this function after you have your data
 #... rescue reviewed and before you finish your data harmonization.
-readsource.file <- '../../02_DataHarmonization/readAuthorYYYY.R'
+readsource.file <- '../../02_DataHarmonization/readBravoOveido2017.R'
 if(file.exists(readsource.file)){
   source(readsource.file)
 }
@@ -179,7 +179,7 @@ This paper looks at the effects of forest thinning on early-stage foliar decompo
   3a) C, N, and P stock dynamics after two years of decomposition as % vs time since incubation.
   3b) Mg, Ca, and K stock dynamics after two years of decomposition as % vs time since incubation.
 
-## Fit for purpose: ProjectName
+## Fit for purpose: BravoOveido2017
 
 <!--- Write a brief discription of the project you are processing this data source for. This could be a copy-paste from other documentation. ---->
 
@@ -230,7 +230,7 @@ These files are in the BravoOveido2017 data rescue.
 
 + Lead
   - [x] Read the article or data resource and the description of the target project
-  - [x] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_AuthorYYYY'
+  - [x] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_BravoOveido2017'
   - [x] Create a copy of template folder and rename it to BravoOveido2017
   - [x] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
   - [x] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
@@ -286,7 +286,7 @@ And is crosschecked with the secondary transcription
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
 
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_TableN_ABC.md AuthorYYYY_TableN.md
+diff --strip-trailing-cr --suppress-common-lines -y temp/BravoOveido2017_TableN_ABC.md BravoOveido2017_TableN.md
 ```
 
 ## Methods
@@ -298,7 +298,7 @@ Any different to the cross check for the methods section will be output after th
 #| eval: false
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_Methods_ABC.md AuthorYYYY_Methods.md
+diff --strip-trailing-cr --suppress-common-lines -y temp/BravoOveido2017_Methods_ABC.md BravoOveido2017_Methods.md
 ```
 
 ### Methods  - Text
@@ -393,7 +393,7 @@ Below verifies that the data from the function matches what is coded above.
 #| label: checkReadFunction_lvl0
 
 if(file.exists(readsource.file)){
-  datafunction.lvl0.ls <- readAuthorYYYY(dataDir = '.',
+  datafunction.lvl0.ls <- readBravoOveido2017(dataDir = '.',
                                          dataLevel = 'level0')
   
   if(isTRUE(all.equal(datafunction.lvl0.ls, data.lvl0.ls))){
@@ -585,7 +585,7 @@ Check for an exact match with the read function.
 #| label: checkReadFunction_lvl1
 
 if(file.exists(readsource.file)){
-  datafunction.lvl1.ls <- readAuthorYYYY(dataDir = '.',
+  datafunction.lvl1.ls <- readBravoOveido2017(dataDir = '.',
                                          dataLevel = 'level1')
   
   if(isTRUE(all.equal(datafunction.lvl0.ls, data.lvl0.ls))){
