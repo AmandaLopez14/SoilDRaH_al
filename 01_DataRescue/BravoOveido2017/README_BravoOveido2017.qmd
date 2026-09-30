@@ -3,18 +3,17 @@ title: "Data Rescue: Bravo-Oveido 2017"
 format:
   html:
     toc: true
-    eval: false #default to not evaluating the chunks, override this the template is completed
 date: last-modified
 date-format: YYYY-MMMM
 bibliography:
-  - BravoOveido_Methods.bib #contains the citations in the methods section
-  - BravoOveido.bib #contains citation for the data source, generally a single citation of the primary paper
+  - BravoOveido2017_Methods.bib #contains the citations in the methods section
+  - BravoOveido2017.bib #contains citation for the data source, generally a single citation of the primary paper
 authors: #author scheme from https://quarto.org/docs/journals/authors.html
   - id: AmandaLopez14 #use the github name as an id
     name:
       given: Amanda
       family: Lopez
-    orcid: #idk what this is
+    #orcid: #idk what this is
     affiliation:
       - ref: uf-ees
     role: #TODO define these roles and add reference
@@ -25,19 +24,19 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
     name:
       given: Layla
       family: Kalandjian
-    orcid: #idk what this is
+    #orcid: #idk what this is
     affiliation:
       - ref: uf-ees
     role: #TODO define these roles and add reference
       - transcription: secondary #secondary, review
       - standardization: lead #review
       - curation: lead #review
-  - id: # i think its brandon #use the github name as an id
+  - id: ktoddbrown # i think its brandon #use the github name as an id
     name:
-      given: 
-      family: 
+      given: Katherine
+      family: Todd-Brown
     orcid: #idk what this is
-    affiliation:
+    affiliation: 
       - ref: uf-ees
     role: #TODO define these roles and add reference
       - transcription: review #secondary, review
@@ -176,8 +175,7 @@ This paper looks at the effects of forest thinning on early-stage foliar decompo
 - Figure 
   1)  Remaining dry mass % of litter after two years of decomposition.
   2) Concentration dynamics after two years of decomposition including C, N, P, etc. concentrations.
-  3a) C, N, and P stock dynamics after two years of decomposition as % vs time since incubation.
-  3b) Mg, Ca, and K stock dynamics after two years of decomposition as % vs time since incubation.
+  3) (a) C, N, and P stock dynamics after two years of decomposition as % vs time since incubation. (b) Mg, Ca, and K stock dynamics after two years of decomposition as % vs time since incubation.
 
 ## Fit for purpose: BravoOveido2017
 
@@ -186,13 +184,16 @@ This paper looks at the effects of forest thinning on early-stage foliar decompo
 The Decomposition Across Drylands (DeAD) data collection is a new data effort targeting dryland decomposition studies. The purpose of this data collection is to develop better litter decay models for dryland ecosystems.
 
 <!--- Include a list of the key variables identified for the project. This is used to identify the elements for the paper for the data rescue. An example is below for a basic geo-located soil carbon stock project. --->
+
 ### Main Variables of Interest
+
   - Location: Found in the Experimental area and layout subheading of the Material and Methods section; located in Montes de Toledo, central Spain, (39°31′N, 4°16′40″W)
   - Duration: Found in the Experimental area and layout subheading of the Material and Methods section; May 2011- February 2013
   - Mass Loss: Decay rate can be found in Table 2, Remaining dry mass can be found in Figure 1 
   - Solar Exposure: Solar exposure not explicitly stated, but canopy reduction mentioned in the Experimental area and layout section of the Material and methods section. 
 
 ### Other Relevant Variables:
+
   - Litter species: Found in experimental area and layout subheading of the material and methods section
   - Litter Chemical Composition: Found in Table 1
   - Microsite data:  Found in the Experimental area and layout subheading of the Material and Methods section
@@ -260,7 +261,6 @@ Table 1 was modified ....
 
 ```{r}
 #| label: table1Check
-#| eval: false #remove when you have the file transcribed
 
 
 read_csv(file = table1.file, #read in the specific file
@@ -345,7 +345,6 @@ The final text transcription from the Methods section is rendered below.
 ```{r}
 #| label: readMethods
 #| output: asis
-#| eval: true
 
 # This revised section will append two ### to any existing headers here so that it renders nicely with the other headers in the document.
 
@@ -546,6 +545,7 @@ data.lvl1.ls <- list(
 
 ```{r}
 #| label: check_of_variable
+#| eval: false
 
 #Read in the list of current 'of_variable' entries
 SoilDRaH_variable_list <- read_csv(file =of_variable.file,
@@ -573,6 +573,7 @@ if(length(new_variables) == 0){
 
 ```{r}
 #| label: check_is_type
+#| eval: false
 
 #read in the current types and what variable they are associated with
 SoilDRaH_type_list <- read_csv(file = is_type.file,
@@ -619,6 +620,7 @@ Check for an exact match with the read function.
 
 ```{r}
 #| label: checkReadFunction_lvl1
+#| eval: false
 
 if(file.exists(readsource.file)){
   datafunction.lvl1.ls <- readBravoOveido2017(dataDir = '.',
