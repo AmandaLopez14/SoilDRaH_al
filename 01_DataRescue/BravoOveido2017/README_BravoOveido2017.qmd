@@ -257,7 +257,7 @@ These files are in the BravoOveido2017 data rescue.
 
 <!--- Common table modifications include: inserting an extra column to pivot sub-headers, filling in NA to identify blanks, and adding Latex or Markdown to denote formatting.---->
 
-Table 1 was modified ....
+Table 1 was modified by consolidating the row denoting the litter type into the row immediately below denoting whether it's the control group or being subject to thinning. 
 
 ```{r}
 #| label: table1Check
