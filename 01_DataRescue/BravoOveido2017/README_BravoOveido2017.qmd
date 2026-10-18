@@ -252,6 +252,59 @@ These files are in the BravoOveido2017 data rescue.
   - [ ] push to your local fork and create a pull request to the main branch of the primary repository
   - [ ] address any revisions in your pull request review
   - [ ] celebrate!
+  
+## Figure 1
+
+<!--- Create a plot to make the figure easy to compare to the table. You don't have to be exactly the same but it should be obvious, at a glance, if the transcript matches.---->
+
+Figure 1 was modified ....
+
+```{r}
+#| label: figure1Check
+
+figCaption <- read_csv(file = figure1.file,
+                       n_max = 1, col_names = 'caption',
+                       show_col_types = FALSE)$caption
+
+figData <- read_csv(file = figure1.file,
+                    skip = 1,
+                    col_types = cols(.default = col_character())) |>
+  mutate(`Time since incubation (Days)` = as.numeric(`Time since incubation(Days)`), #in my perfect world this changes any str to numeric
+         `Remaining dry mass (%)` = as.numeric(`Remaining dry mass (%)`))
+
+ggplot(figData,
+       aes(x = `Time since incubations (Days)`,
+           y = `Remaining dry mass (%)`)) +
+  geom_line(aes(linetype = Species,
+                color = Species)) + 
+  geom_point(aes(shape = Species,
+                 color = Species,
+                 size = 2)) +
+  geom_line(aes(x=x, y=y, "salmon", `oak`))
+#got stuck here
+
+
+```
+
+Cross check for the figure above. 
+Looking for `character(0)` outputs here to show that the two transcripts match exactly.
+
+```{r}
+#| label: compareFigure1
+
+# You will want to repeat the line below to cross check each csv and md file in the
+#... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
+
+print('Differing lines in primary file:')
+sprintf('>%s', setdiff(read_lines('AuthorYYYY_FigureM.csv'),
+        read_lines('temp/AuthorYYYY_FigureM_AC.csv')))
+
+print('Differing lines in secondary file:')
+sprintf('<%s',setdiff(read_lines('temp/AuthorYYYY_FigureM_AC.csv'),
+        read_lines('AuthorYYYY_FigureM.csv')))
+
+
+```
 
 ## Table 1
 
