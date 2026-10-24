@@ -262,16 +262,18 @@ Figure 1 was modified ....
 ```{r}
 #| label: figure1Check
 
-#fig1Caption <- read_csv(file = figure1.file,
-#                       n_max = 1, col_names = 'caption',
-#                       show_col_types = FALSE)$caption
+fig1Caption <- read_csv(file = figure1.file,
+                       n_max = 1, col_names = 'caption',
+                       show_col_types = FALSE)$caption
 
 fig1Data <- read_csv(file = figure1.file,
-#                    skip = 1,
+                    skip = 1,
                     col_types = cols(.default = col_character()))
 
 fig1Data$`Time since incubation (Days)` <- as.numeric(fig1Data$`Time since incubation (Days)`)
 fig1Data$`Remaining dry mass (%)` <- as.numeric(fig1Data$`Remaining dry mass (%)`)
+fig1Data$`ymin` <- as.numeric(fig1Data$`ymin`)
+fig1Data$`ymax` <- as.numeric(fig1Data$`ymax`)
 #  mutate(`Time since incubation (Days)` = as.numeric(`Time since incubation (Days)`), #in my perfect world this changes any str to numeric
  #        `Remaining dry mass (%)` = #as.numeric(`Remaining dry mass (%)`))
 
@@ -286,10 +288,19 @@ ggplot(fig1Data,
   geom_point(aes(shape = Species,
                  color = Species),
                  size = 2) +
-  facet_grid(~ `Type`, scales = "free_x", space = "free_x") 
+  geom_errorbar(
+    aes(ymin = `ymin`, 
+        ymax = `ymax`,
+        color = Species),
+    width=0.2
+    ) +
+  facet_grid(~ `Type`, scales = "free_x", space = "free_x") +
+  scale_x_continuous(breaks = seq(0,720, by = 90)) + 
+  scale_y_continuous(breaks = c(50,60,70,80,90,100))#why doesnt it work!
  # geom_line(aes(x=x, y=y, "salmon", `oak`))
-#add caption
-#add error bar to csv
+#add y scale
+# move the species  to be ON the graph (middle)
+# add p
 # graph = good
 
 
