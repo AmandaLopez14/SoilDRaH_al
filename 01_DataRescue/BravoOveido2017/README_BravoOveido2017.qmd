@@ -13,7 +13,6 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
     name:
       given: Amanda
       family: Lopez
-    #orcid: #idk what this is
     affiliation:
       - ref: uf-ees
     role: #TODO define these roles and add reference
@@ -24,13 +23,10 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
     name:
       given: Layla
       family: Kalandjian
-    #orcid: #idk what this is
     affiliation:
       - ref: uf-ees
-    role: #TODO define these roles and add reference
-      - transcription: secondary #secondary, review
-      - standardization: lead #review
-      - curation: lead #review
+    role:
+      - transcription: secondary 
   - id: ktoddbrown # i think its brandon #use the github name as an id
     name:
       given: Katherine
@@ -110,6 +106,11 @@ timelog:
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
       duration: P30M
+  - activity:
+      description: completed figure 1 secondary transcription
+      who: laylakalandjian
+      start: 2026-11-03 T15:15
+      duration: P60M
 version: 'vs202512' #template version, remove before use
 ---
 
